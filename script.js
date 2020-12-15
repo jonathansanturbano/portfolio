@@ -7,7 +7,7 @@
 // var typed = new Typed('.element', options);
 
 var navbar = document.querySelector('.navigation');
-var navigationLinks = document.querySelectorAll('.navigation a');
+var navigationLinks = document.querySelectorAll('.navigation-items-top');
 
 // navigationLinks.forEach(link => {
 //   link.addEventListener('hover', () => {
@@ -21,13 +21,14 @@ if (navbar) {
       navbar.classList.add('navigation-white');
       navigationLinks.forEach(link => {
         link.style.color = "black";
-        link.style.boxColor = "  box-shadow: 1px 2px 5px rgba(80, 80, 80, 0.9);";
+        link.classList.add("navigation-items-bottom");
       });
     } else {
       navbar.classList.remove('navigation-white');
       navigationLinks.forEach(link => {
         link.style.backgroundColor = "transparent";
         link.style.color = "white";
+        link.classList.remove("navigation-items-bottom");
       })
     }
   });
