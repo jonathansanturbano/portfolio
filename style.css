@@ -68,13 +68,14 @@ h1{
   font-variant: petite-caps;
   font-size: 1.2rem;
   transition: all 0.5s;
-  transition: box-shadow 1.2s;
+  transition: box-shadow 2s;
 }
 
 .navigation-items:hover {
-  color: black;
+  color: rgb(100, 100, 100);
   background-color: #F8E462;
   box-shadow: 1px 2px 15px #F8E462;
+  transition: box-shadow 1s;
 }
 
 a {
