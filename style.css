@@ -8,6 +8,7 @@ body{
   font-family: 'Roboto', sans-serif;
   height: fit-content;
   background: linear-gradient(-216deg, #F0EEE8 51%, #F7CAC9 85%);
+  margin: 0;
 }
 
 h1{
@@ -29,6 +30,11 @@ h1{
   transition: 0.5s background-color ease;
   transition: 0.8s height ease;
   width: 100vw;
+}
+
+.mobile-indicator {
+  font-size: 1.3rem;
+  color: white;
 }
 
 .navigation-links {
@@ -62,15 +68,18 @@ h1{
   font-variant: petite-caps;
   font-size: 1.2rem;
   transition: all 0.5s;
+  transition: box-shadow 1.2s;
 }
 
 .navigation-items:hover {
   color: black;
   background-color: #F8E462;
+  box-shadow: 1px 2px 15px #F8E462;
 }
 
 a {
   color: white;
+  text-decoration: none;
 }
 
 a:hover {

@@ -32,3 +32,21 @@ if (navbar) {
     }
   });
 }
+
+if(window.innerWidth < 541) {
+
+  const arrow = `
+                 <div class="mobile-indicator">
+                  <p style="margin-bottom: 0;">
+                    <span style="font-style: italic;">Pssst</span>
+                    . This way
+                  </p>
+                  <p>👇</p>
+                 </div>
+                 `;
+  const banner = document.querySelector('.banner');
+  banner.insertAdjacentHTML('beforeend', arrow);
+  window.addEventListener('scroll', () => {
+    banner.lastElementChild.style.opacity = ((window.innerHeight - window.scrollY * 1.5) / window.innerHeight);
+  });
+}
