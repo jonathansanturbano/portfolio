@@ -2,23 +2,23 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-  background-color: rgba(126, 246, 255,0);
+body {
+  background-color: rgba(126, 246, 255, 0);
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: fit-content;
-  background: linear-gradient(-216deg, #F0EEE8 51%, #F7CAC9 85%);
+  background: linear-gradient(-216deg, #f0eee8 51%, #f7cac9 85%);
   margin: 0;
   font-weight: 100;
 }
 
-h2{
+h2 {
   text-align: center;
   font-size: 28px;
   font-weight: 400;
 }
 
-.navigation{
+.navigation {
   position: fixed;
   height: 100px;
   display: flex;
@@ -78,7 +78,7 @@ h2{
 .navigation-items-top:hover {
   color: white;
   /*background-color: #F8E462;*/
-  box-shadow: 1px 2px 15px #F8E462;
+  box-shadow: 1px 2px 15px #f8e462;
   transition: box-shadow 1s;
 }
 
@@ -111,8 +111,14 @@ p {
   font-size: 24px;
 }
 
-.banner{
-  background-image: linear-gradient(-216deg, rgba(0,0,0,0.3) 0%, rgba(230,230,230,0.2) 50%, rgba(0,0,0,0.3) 100%),  url("profile.jpg");
+.banner {
+  background-image: linear-gradient(
+      -216deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(230, 230, 230, 0.2) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("profile.jpg");
   height: 100vh;
   background-size: cover;
   background-position: top;
@@ -122,7 +128,7 @@ p {
   box-shadow: 0px 8px 5px rgba(200, 230, 230, 0.3);
 }
 
-.my-container{
+.container {
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -131,13 +137,13 @@ p {
 }
 
 @media (max-width: 2000px) {
-  .my-container{
+  .container {
     width: 700px;
   }
 }
 
 @media (max-width: 768px) {
-  .my-container{
+  .container {
     width: 500px;
   }
 
@@ -149,7 +155,7 @@ p {
 }
 
 @media (max-width: 540px) {
-  .my-container{
+  .container {
     width: 300px;
   }
 
@@ -159,7 +165,7 @@ p {
 }
 
 .cards {
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: solid 0.1px rgb(230, 230, 230);
   margin: 20px 0 20px 0;
   display: flex;
@@ -171,6 +177,34 @@ p {
 .cards:last-of-type {
   border-bottom: none;
   margin: 20px 0 20px 0;
+}
+
+.card-portfolio {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.card-portfolio > img {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.card-portfolio > img:last-child {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .card-portfolio > img:first-child {
+    display: none;
+  }
+
+  .card-portfolio > img:last-child {
+    margin-left: 1rem;
+    object-fit: contain;
+    display: block;
+  }
 }
 
 .footer-links {
