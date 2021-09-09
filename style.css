@@ -257,3 +257,11 @@ p {
 .footer-links a:hover {
   opacity: 1;
 }
+
+#portfolio {
+  padding: 100px 0 100px 0;
+}
+
+#portfolio > h2 {
+  margin-bottom: 4rem;
+}
