@@ -33,6 +33,7 @@ h2 {
   transition: 0.5s background-color ease;
   transition: 0.8s height ease;
   width: 100vw;
+  z-index: 1;
 }
 
 .mobile-indicator {
@@ -180,31 +181,63 @@ p {
 }
 
 .card-portfolio {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  border-radius: 4px;
+  box-shadow: 3px 5px 20px rgba(200, 200, 200, 0.1);
+  overflow: auto;
 }
 
-.card-portfolio > img {
+.card-front > img {
   height: 100%;
   width: 100%;
   object-fit: scale-down;
 }
 
-.card-portfolio > img:last-child {
+.card-front > img:last-child {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .card-portfolio > img:first-child {
+  .card-front > img:first-child {
     display: none;
   }
 
-  .card-portfolio > img:last-child {
-    margin-left: 1rem;
+  .card-front > img:last-child {
     object-fit: contain;
     display: block;
   }
+}
+
+.card-back {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(10, 10, 10, 0.6);
+  color: white;
+}
+
+.card-back > p {
+  padding: 30px;
+}
+
+.card-back > a {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+.card-portfolio:hover > .card-back {
+  visibility: inherit;
 }
 
 .footer-links {
