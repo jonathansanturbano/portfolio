@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap")
 html {
   scroll-behavior: smooth;
 }
@@ -14,8 +15,29 @@ body {
 
 h2 {
   text-align: center;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 400;
+  font-family: "PT Sans", sans-serif;
+  font-style: italic;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  line-height: 30px;
+  font-size: 24px;
+}
+
+i {
+  font-size: 1.4rem;
 }
 
 .navigation {
@@ -95,21 +117,6 @@ h2 {
   /*background-color: #F8E462;*/
   box-shadow: 1px 2px 15px rgb(39, 60, 44);
   transition: box-shadow 1s;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  color: black;
-  text-decoration: none;
-}
-
-p {
-  line-height: 30px;
-  font-size: 24px;
 }
 
 .banner {
@@ -212,7 +219,8 @@ p {
 }
 
 .card-back {
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
   position: absolute;
   top: 0;
   left: 0;
@@ -237,7 +245,7 @@ p {
 }
 
 .card-portfolio:hover > .card-back {
-  visibility: inherit;
+  opacity: 1;
 }
 
 .footer-links {
@@ -252,6 +260,10 @@ p {
   text-decoration: none;
   font-size: 42px;
   padding: 0px 10px;
+}
+
+.footer-links > a > i {
+  font-size: 42px;
 }
 
 .footer-links a:hover {
